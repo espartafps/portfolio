@@ -1,0 +1,49 @@
+---
+import { certifications } from '../data/certifications';
+---
+
+<section
+  id="certificacoes"
+  class="bg-zinc-50 dark:bg-zinc-900/40 border-y border-zinc-200 dark:border-zinc-800"
+>
+  <div class="container-section">
+    <p class="section-label">Qualificações</p>
+    <h2 class="section-title">Certificações</h2>
+    <p class="text-zinc-500 dark:text-zinc-400 text-lg max-w-2xl mb-10">
+      Aprendizado contínuo na interseção entre dados, IA e mercado financeiro.
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {
+        certifications.map(({ title, issuer, year, highlight }) => (
+          <div
+            class:list={[
+              'card card-hover p-5 flex flex-col gap-3',
+              highlight && 'border-accent-500/30 dark:border-accent-500/20',
+            ]}
+          >
+            <div class="flex items-start justify-between gap-2">
+              <p
+                class:list={[
+                  'text-sm font-semibold leading-snug',
+                  highlight
+                    ? 'text-zinc-900 dark:text-zinc-100'
+                    : 'text-zinc-800 dark:text-zinc-200',
+                ]}
+              >
+                {title}
+              </p>
+              {highlight && (
+                <span class="shrink-0 w-1.5 h-1.5 rounded-full bg-accent-500 mt-1.5" aria-hidden="true" />
+              )}
+            </div>
+            <div class="flex items-center justify-between mt-auto pt-2 border-t border-zinc-100 dark:border-zinc-800">
+              <span class="text-xs text-zinc-500 dark:text-zinc-500">{issuer}</span>
+              <span class="text-xs font-mono text-zinc-400 dark:text-zinc-600">{year}</span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

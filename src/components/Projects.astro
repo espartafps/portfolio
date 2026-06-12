@@ -1,0 +1,47 @@
+---
+import { projects } from '../data/projects';
+import ProjectCard from './ProjectCard.astro';
+
+const featured = projects.find((p) => p.featured);
+const others = projects.filter((p) => !p.featured);
+---
+
+<section id="projetos" class="bg-zinc-50 dark:bg-zinc-900/40 border-y border-zinc-200 dark:border-zinc-800">
+  <div class="container-section">
+    <p class="section-label">Trabalho</p>
+    <h2 class="section-title">Projetos em destaque</h2>
+    <p class="text-zinc-500 dark:text-zinc-400 text-lg max-w-2xl mb-12">
+      Ferramentas construídas na interseção entre mercado de capitais, dados e IA — cada uma
+      resolvendo um problema que eu conheci operando por dentro.
+    </p>
+
+    <!-- Projeto principal em destaque -->
+    {featured && (
+      <div class="mb-6">
+        <ProjectCard project={featured} featured />
+      </div>
+    )}
+
+    <!-- Demais projetos -->
+    <div class="grid md:grid-cols-2 gap-6 items-start">
+      {others.map((project) => <ProjectCard project={project} />)}
+
+      <!-- Slot para próximo projeto -->
+      <div
+        class="flex items-center justify-center rounded-2xl border-2 border-dashed border-zinc-200 dark:border-zinc-800 p-12 text-center hover:border-accent-500/30 dark:hover:border-accent-500/20 transition-colors duration-300 min-h-[200px]"
+        aria-hidden="true"
+      >
+        <div>
+          <div
+            class="w-8 h-8 rounded-full border-2 border-zinc-300 dark:border-zinc-700 flex items-center justify-center mx-auto mb-3"
+          >
+            <span class="text-zinc-400 dark:text-zinc-600 text-lg leading-none select-none">+</span>
+          </div>
+          <p class="text-xs font-mono text-zinc-400 dark:text-zinc-600 tracking-wide">
+            próximo projeto
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

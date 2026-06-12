@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    @apply bg-accent-500 text-white;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .container-section {
+    @apply max-w-5xl mx-auto px-6 py-24;
+  }
+
+  .section-label {
+    @apply text-accent-500 font-mono text-xs font-medium tracking-widest uppercase mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-600
+           text-white font-medium rounded-lg
+           transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500
+           focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3
+           border border-zinc-300 dark:border-zinc-700
+           hover:border-accent-500 dark:hover:border-accent-500
+           text-zinc-700 dark:text-zinc-300
+           hover:text-accent-600 dark:hover:text-accent-400
+           font-medium rounded-lg
+           transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500
+           focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950;
+  }
+
+  .skill-pill {
+    @apply text-xs font-mono px-2.5 py-1 rounded-md
+           bg-zinc-100 dark:bg-zinc-800
+           text-zinc-600 dark:text-zinc-400
+           border border-zinc-200 dark:border-zinc-700;
+  }
+
+  .card {
+    @apply rounded-2xl border border-zinc-200 dark:border-zinc-800
+           bg-white dark:bg-zinc-900
+           transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:border-accent-500/40 hover:shadow-lg hover:shadow-accent-500/5;
+  }
+}

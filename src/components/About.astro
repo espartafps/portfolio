@@ -1,0 +1,82 @@
+---
+const milestones = [
+  {
+    num: '01',
+    title: 'Engenharia Elétrica — UNESP · UNISAL',
+    detail:
+      'Hardware, sistemas embarcados e pensamento sistêmico. Aprendi que problemas complexos não se resolvem no detalhe — se resolvem na arquitetura.',
+  },
+  {
+    num: '02',
+    title: 'Capital Markets — Itaú Unibanco',
+    detail:
+      '~5 anos em custódia, conciliação e controladoria de ativos no Wealth Management. Aprendi o que os relatórios não mostram: onde os processos falham e o que os dados revelam quando você sabe onde olhar.',
+  },
+  {
+    num: '03',
+    title: 'Dados & IA — interseção que me define',
+    detail:
+      'SQL, Python, AWS, Machine Learning e IA Generativa — aplicados especificamente ao mercado financeiro. O diferencial não é a ferramenta, é o contexto de negócio que direciona o uso.',
+  },
+];
+---
+
+<section
+  id="sobre"
+  class="bg-zinc-50 dark:bg-zinc-900/40 border-y border-zinc-200 dark:border-zinc-800"
+>
+  <div class="container-section">
+    <p class="section-label">Sobre mim</p>
+    <h2 class="section-title">A trajetória por trás dos dados</h2>
+
+    <div class="mt-10 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <!-- Texto narrativo -->
+      <div class="space-y-5 text-zinc-600 dark:text-zinc-400 leading-relaxed text-[1.0625rem]">
+        <p>
+          Minha história começa com circuitos e a pergunta que todo engenheiro faz:{' '}
+          <em class="text-zinc-900 dark:text-zinc-200 not-italic font-medium">
+            como isso funciona de verdade?
+          </em>{' '}
+          A Engenharia Elétrica na UNESP me deu mais do que conhecimento técnico — me ensinou a
+          decompor sistemas complexos, identificar onde a falha mora e construir soluções que
+          funcionam quando ninguém está olhando.
+        </p>
+        <p>
+          Ao entrar no Itaú Unibanco como estagiário e crescer até analista de Capital Markets,
+          descobri que o mercado financeiro tem a mesma lógica: sistemas interdependentes, dados em
+          movimento constante e consequências reais para cada decisão.{' '}
+          <em class="text-zinc-900 dark:text-zinc-200 not-italic font-medium">
+            Trabalho na camada de custódia e controladoria de fundos — onde nenhum erro passa em
+            branco.
+          </em>
+        </p>
+        <p>
+          Hoje uso tecnologia para fazer o que o mercado financeiro ainda faz manualmente: estruturar
+          problemas, automatizar tarefas repetitivas e criar visibilidade a partir de dados. Não sou
+          um cientista de dados que leu sobre fundos —{' '}
+          <em class="text-zinc-900 dark:text-zinc-200 not-italic font-medium">
+            sou analista de mercado que sabe programar, e essa combinação muda o tipo de pergunta
+            que consigo responder.
+          </em>
+        </p>
+      </div>
+
+      <!-- Milestones -->
+      <div class="flex flex-col gap-4">
+        {
+          milestones.map(({ num, title, detail }) => (
+            <div class="card card-hover flex gap-5 p-5 sm:p-6">
+              <span class="font-mono text-xs font-semibold text-accent-500 shrink-0 mt-0.5 w-6">
+                {num}
+              </span>
+              <div>
+                <p class="font-semibold text-zinc-900 dark:text-zinc-100 mb-1.5">{title}</p>
+                <p class="text-sm text-zinc-500 dark:text-zinc-500 leading-relaxed">{detail}</p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

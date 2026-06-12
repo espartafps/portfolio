@@ -1,0 +1,81 @@
+---
+const areas = [
+  {
+    title: 'Dados & IA',
+    items: [
+      'Python (Pandas, NumPy)',
+      'SQL',
+      'Machine Learning',
+      'IA Generativa',
+      'Analytics Engineering',
+      'LaTeX',
+    ],
+  },
+  {
+    title: 'Cloud & Ferramentas',
+    items: [
+      'AWS Athena · Glue · QuickSight',
+      'Power BI',
+      'Office Scripts',
+      'APIs (REST)',
+      'Docker',
+      'Git',
+    ],
+  },
+  {
+    title: 'Capital Markets',
+    items: [
+      'Custódia de Fundos',
+      'Conciliação Física e Financeira',
+      'Controladoria de Ativos',
+      'Liberação de Cotas',
+      'KPIs & Dashboards',
+      'Melhoria de Processos',
+    ],
+  },
+  {
+    title: 'Engenharia',
+    items: [
+      'ESP32 · Microcontroladores',
+      'Sistemas Embarcados',
+      'Bancada de Testes',
+      'Protocolos I²C · SPI · UART',
+      'Sensores & Atuadores',
+    ],
+  },
+];
+---
+
+<section
+  id="stack"
+  class="container-section"
+>
+  <p class="section-label">Competências</p>
+  <h2 class="section-title">Stack & especialidades</h2>
+  <p class="text-zinc-500 dark:text-zinc-400 text-lg max-w-2xl mb-12">
+    Três mundos que se reforçam mutuamente — cada área me dá contexto que as outras não têm.
+  </p>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    {
+      areas.map(({ title, items }, idx) => (
+        <div class="card card-hover p-6 flex flex-col gap-4">
+          <div class="flex items-center gap-2">
+            <span class="font-mono text-[10px] font-semibold text-accent-500/60 tracking-widest">
+              0{idx + 1}
+            </span>
+            <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 text-sm">{title}</h3>
+          </div>
+          <ul class="flex flex-col gap-2" role="list">
+            {items.map((item) => (
+              <li class="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <span class="w-1 h-1 rounded-full bg-accent-500 shrink-0" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
