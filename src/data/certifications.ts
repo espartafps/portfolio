@@ -13,7 +13,7 @@ export const certifications: Certification[] = [
     highlight: true,
   },
   {
-    title: 'Gestão de Projetos — Trained',
+    title: 'Gestão de Projetos: Trained',
     issuer: 'Itaú Unibanco',
     year: '2026',
   },
@@ -23,12 +23,12 @@ export const certifications: Certification[] = [
     year: '2025',
   },
   {
-    title: 'Associate — Analytics Engineering',
+    title: 'Analytics Engineering Associate',
     issuer: 'Itaú Unibanco',
     year: '2025',
   },
   {
-    title: 'Associate — Generative AI',
+    title: 'Generative AI Associate',
     issuer: 'Itaú Unibanco',
     year: '2025',
   },

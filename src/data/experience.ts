@@ -17,11 +17,11 @@ export interface Education {
 
 export const experiences: Experience[] = [
   {
-    period: 'nov 2021 — presente',
+    period: 'nov 2021 / presente',
     role: 'Capital Markets Analyst',
     company: 'Itaú Unibanco',
     location: 'São Paulo · Híbrido',
-    area: 'Capital Markets / Wealth Management — Custódia de Fundos e Processamento de Carteiras',
+    area: 'Capital Markets / Wealth Management: Custódia de Fundos e Processamento de Carteiras',
     highlights: [
       'Liberação e avaliação de cotas de fundos (Asset, FoF e fundos de terceiros)',
       'Conciliação física e financeira de carteiras',
@@ -32,8 +32,8 @@ export const experiences: Experience[] = [
     current: true,
   },
   {
-    period: 'abr 2021 — nov 2021',
-    role: 'Estagiário — Fund Processing (555 Funds)',
+    period: 'abr 2021 / nov 2021',
+    role: 'Estagiário: Fund Processing (555 Funds)',
     company: 'Itaú Unibanco',
     location: 'Remoto',
     highlights: [
@@ -46,13 +46,13 @@ export const experiences: Experience[] = [
 
 export const education: Education[] = [
   {
-    period: 'jul 2023 — presente',
+    period: 'jul 2023 / 2026',
     degree: 'Bacharelado em Engenharia Elétrica',
     institution: 'UNISAL',
-    current: true,
+    current: false,
   },
   {
-    period: '2018 — 2023',
+    period: '2018 / 2023',
     degree: 'Bacharelado em Engenharia Elétrica',
     institution: 'UNESP',
     current: false,
