@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npx astro build",
+  "buildCommand": "node ./node_modules/astro/bin/astro.js build",
   "outputDirectory": "dist",
   "framework": "astro"
 }
