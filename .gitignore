@@ -1,0 +1,25 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+.astro/
+
+# Vercel
+.vercel/
+
+# Ambiente local
+.env
+.env.local
+.env.*.local
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
